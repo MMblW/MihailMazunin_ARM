@@ -17,7 +17,8 @@ public:
 
 public slots:
     void SetRawColor();
-    void SetNewColor(QColor);
+    void SetRGBColor(QColor);
+    void DoMathsColor(int R, int G, int B);
 private:
     Ui::MainClass *ui;
 };

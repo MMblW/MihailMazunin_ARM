@@ -24,17 +24,45 @@ void MainClass::SetRawColor()
     QColor RawColor = QColorDialog::getColor();
 //    if (SaveFile.open(QIODevice::WriteOnly | QIODevice::Text))
 //    {
-        qDebug() << RawColor.HexArgb;
+//        qDebug() << RawColor.HexArgb;
 //        QTextStream stream(&SaveFile);
 //        stream << "Hfplfdfnhb";
 //        SaveFile.close();
 //    }
-    SetNewColor(RawColor);
+    SetRGBColor(RawColor);
 }
 
-void MainClass::SetNewColor(QColor RawColor)
+void MainClass::SetRGBColor(QColor RawColor)
 {
+    QRgb rgb = RawColor.rgb();
+    int R = qRed(rgb);
+    int G = qGreen(rgb);
+    int B = qBlue(rgb);
+    if (R < 255 && G < 255 && B < 255)
+    {
+        QColor NewColor;
+        NewColor = DoMathsColor(R, G, B);
+    }
+    else
+    {
+        qDebug() << "Выбранный цвет не нуждается в реставрации!";
+    }
+}
 
+void MainClass::DoMathsColor(int R, int G, int B)
+{
+    int mx = R;
+    if (G > mx) { mx = G; }
+    if (B > mx) { mx = B; }
+    double TempCol = mx;
+    double koef = 255 / TempCol;
+    TempCol = R * koef;
+    int NewR = TempCol;
+    TempCol = G * koef;
+    int NewG = TempCol;
+    TempCol = B * koef;
+    int NewB = TempCol;
+    qDebug() << NewR << " " << NewG << " " << NewB << " - Читай сюда";
 }
 
 MainClass::~MainClass()
