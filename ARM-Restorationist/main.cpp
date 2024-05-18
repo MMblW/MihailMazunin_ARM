@@ -1,7 +1,6 @@
 #include "mainclass.h"
 
 #include <QApplication>
-#include <QColorDialog>
 
 int main(int argc, char *argv[])
 {
