@@ -14,22 +14,18 @@ win32 {
 SOURCES += \
     adjacency.cpp \
     edge.cpp \
-    getweight.cpp \
     graph.cpp \
     graphvertex.cpp \
     main.cpp \
-    dialog.cpp \
-    showinfo.cpp
+    dialog.cpp
 
 HEADERS += \
     TSPalgorithm.h \
     adjacency.h \
     dialog.h \
     edge.h \
-    getweight.h \
     graph.h \
-    graphvertex.h \
-    showinfo.h
+    graphvertex.h
 
 FORMS += \
     adjacency.ui \

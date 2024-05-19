@@ -37,7 +37,7 @@ private:
     QGraphicsItemGroup *drawing;
     Graph *graph;
     int num = 0;
-    QString content = "V";
+    QString content = " ";
 
 
 };

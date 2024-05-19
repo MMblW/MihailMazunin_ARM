@@ -74,16 +74,16 @@ void graphVertex::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
 
 QVariant graphVertex::itemChange(GraphicsItemChange change, const QVariant &value)
 {
-    switch (change) {
-        case ItemPositionHasChanged:
-            foreach (Edge *edge, edgeList)
-                edge->adjust();
-            break;
-        default:
-            break;
-        };
-
-        return QGraphicsItem::itemChange(change, value);
+    switch (change)
+    {
+    case ItemPositionHasChanged:
+        foreach (Edge *edge, edgeList)
+            edge->adjust();
+        break;
+    default:
+        break;
+    };
+    return QGraphicsItem::itemChange(change, value);
 }
 
 void graphVertex::mousePressEvent(QGraphicsSceneMouseEvent *event)
