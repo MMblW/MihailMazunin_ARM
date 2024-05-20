@@ -38,8 +38,6 @@ private:
     Graph *graph;
     int num = 0;
     QString content = " ";
-
-
 };
 #endif // GRAPHVERTEX_H
 

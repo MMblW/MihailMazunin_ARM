@@ -3,7 +3,6 @@
 
 #include <qmath.h>
 #include <QPainter>
-#include "getweight.h"
 
 Edge::Edge(graphVertex *sourceNode, graphVertex *destNode)
     : arrowSize(8)

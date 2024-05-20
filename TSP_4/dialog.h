@@ -3,10 +3,8 @@
 
 #include "graphvertex.h"
 #include "graph.h"
-#include "showinfo.h"
 
 #include <adjacency.h>
-#include <getweight.h>
 
 #include <QDialog>
 #include <QtCore>
