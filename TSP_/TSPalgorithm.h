@@ -31,9 +31,6 @@ float MaskTSP(int i, int mask, QVector<QVector<int>>& adj, int size, QVector<QVe
                 masked[mask][i] = std::min(masked[mask][i], MaskTSP(j, mask - (1 << j), adj, size, masked) + adj[i][j]);
 
             }
-            /*
-
-            */
         }
     }
     return masked[mask][i];

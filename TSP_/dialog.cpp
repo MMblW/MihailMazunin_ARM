@@ -48,12 +48,12 @@ void Dialog::on_btnAdj_clicked()
     adj->show();
 }
 
-
 void Dialog::on_btnAddEdge_clicked()
 {
     graphVertex *node1, *node2;
     int vert1, vert2;
-    if (ui->graphicsView->scene()->selectedItems().size() == 1) {
+    if (ui->graphicsView->scene()->selectedItems().size() == 1)
+    {
         node1 = dynamic_cast<graphVertex *> (ui->graphicsView->scene()->selectedItems().at(0));
         node1->setPressed(true);
         if (for_draw.isEmpty()) for_draw.push_back(node1);
@@ -91,4 +91,3 @@ void Dialog::on_btnTSP_clicked()
     QString res = TSP(graph);
     ui->label->setText(res);
 }
-
